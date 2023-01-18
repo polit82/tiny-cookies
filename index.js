@@ -1,10 +1,22 @@
-function set(key, value) {
-	document.cookie = key+"="+encodeURIComponent(value);
+function set(name, value, attrs) {
+  document.cookie = name+"="+encodeURIComponent(value)+
+    (attrs ?
+      (attrs.path ? ";path="+attrs.path : "") +
+      (attrs.domain ? ";domain="+attrs.domain : "") +
+      (attrs.maxAge ? ";max-age="+attrs.maxAge : "") +
+      (attrs.expires ? ";expires="+attrs.expires : "") +
+      (attrs.secure ? ";secure" : "") +
+      (attrs.samesite ? ";samesite" : "")
+    : "");
 }
 
-function get(key) {
-	const cookie = document.cookie.split('; ').find((cookie) => cookie.startsWith(key));
-	return decodeURIComponent(cookie.substring(cookie.indexOf("=")+1));
+function get(name) {
+  const cookie = document.cookie.split('; ').find((cookie) => cookie.startsWith(name));
+  return cookie ? decodeURIComponent(cookie.substring(cookie.indexOf("=")+1)) : null;
 }
 
-module.exports = { set: set, get: get }
+function remove(name) {
+  set(name, "", {expires: "0"});
+}
+
+module.exports = { set: set, get: get, remove: remove }
