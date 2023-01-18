@@ -1,8 +1,10 @@
 {
   "name": "tiny-cookies",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tiny cookie library",
   "main": "index.js",
+  "browser": true,
+  "repository": "https://github.com/polit82/tiny-cookies",
   "scripts": {},
   "keywords": [
     "cookie",
