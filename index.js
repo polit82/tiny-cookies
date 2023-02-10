@@ -16,7 +16,7 @@ function get (name) {
 }
 
 function remove (name) {
-  set(name, '', { expires: '0' })
+  set(name, '', { maxAge: '0' })
 }
 
 module.exports = { set, get, remove }

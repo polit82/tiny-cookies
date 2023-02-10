@@ -1,6 +1,6 @@
 {
   "name": "tiny-cookies",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Tiny cookie library",
   "main": "index.js",
   "browser": true,
