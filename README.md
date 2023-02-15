@@ -29,7 +29,7 @@ npm i --save-dev tiny-cookies
 
 ## Usage
 
-### - set(name, value, attrs)
+### • set(name, value, attrs)
 Set cookie named `name` to `value`, optionally specifying attributes with the `attrs` object.
 ```javascript
 cookies.set("lang", "en", {
@@ -37,15 +37,15 @@ cookies.set("lang", "en", {
   domain: "example.com",
   maxAge: 60*60*24*365,
   expires: "Mon, 1 Jan 2024 12:00:00 GMT",
-  secure: true,
-  samesite: true
+  sameSite: "Strict",
+  secure: true
 });
 ```
 
-### - get(name)
+### • get(name)
 Return the value of the cookie named `name`, or `null` if none exist.
 
-### - remove(name)
+### • remove(name)
 Delete the cookie named `name`.
 ```javascript
 cookies.remove("lang");
