@@ -5,8 +5,8 @@ function set (name, value, attrs) {
       (attrs.domain ? ';domain=' + attrs.domain : '') +
       (attrs.maxAge ? ';max-age=' + attrs.maxAge : '') +
       (attrs.expires ? ';expires=' + attrs.expires : '') +
-      (attrs.secure ? ';secure' : '') +
-      (attrs.samesite ? ';samesite' : '')
+      (attrs.sameSite ? ';samesite=' + attrs.sameSite : '') +
+      (attrs.secure ? ';secure' : '')
       : '')
 }
 
