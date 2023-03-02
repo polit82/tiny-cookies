@@ -38,7 +38,8 @@ cookies.set("lang", "en", {
   maxAge: 60*60*24*365,
   expires: "Mon, 1 Jan 2024 12:00:00 GMT",
   sameSite: "Strict",
-  secure: true
+  secure: true,
+  partitioned: false,
 });
 ```
 

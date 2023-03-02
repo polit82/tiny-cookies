@@ -6,7 +6,8 @@ function set (name, value, attrs) {
       (attrs.maxAge ? ';max-age=' + attrs.maxAge : '') +
       (attrs.expires ? ';expires=' + attrs.expires : '') +
       (attrs.sameSite ? ';samesite=' + attrs.sameSite : '') +
-      (attrs.secure ? ';secure' : '')
+      (attrs.secure ? ';secure' : '') +
+      (attrs.partitioned ? ';partitioned' : '')
       : '')
 }
 
